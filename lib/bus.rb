@@ -33,4 +33,6 @@ class Bus
   def kick_out
     @passengers.shift
   end
+
+  #kick out method is for iteration 4
 end
