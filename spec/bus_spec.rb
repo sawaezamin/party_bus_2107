@@ -90,7 +90,7 @@ describe Bus do
       2.times do
         bus.kick_out
       end
-      
+
       expect(bus.number_of_passengers).to eq(3)
       expect(bus.over_capacity?).to eq(false)
       expect(bus.passengers).to eq(['James', 'Cat', 'Alice'])

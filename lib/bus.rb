@@ -5,34 +5,33 @@ class Bus
     @capacity = capacity
     @passengers = []
   end
-  # everything above this is iteration 1
+
 
   def add_passenger(passenger)
     @passengers << passenger
   end
 
+
   def yell_at_passengers
-    new_passengers = []
-    @passengers.each do |name|
-      new_passengers << name.upcase
+    list_names_caps = []
+    @passengers.each do |person|
+      list_names_caps << person.upcase
     end
-    new_passengers
+    list_names_caps
   end
-  # the two methods above is iteration 2
+
 
   def number_of_passengers
-    @passengers.length
+    @passengers.count
   end
 
+
   def over_capacity?
-    return false if @passengers.length <= @capacity
-    true
+    number_of_passengers > capacity
   end
-  #the two methods above is iteration 3
+
 
   def kick_out
     @passengers.shift
   end
-
-  #kick out method is for iteration 4
 end
